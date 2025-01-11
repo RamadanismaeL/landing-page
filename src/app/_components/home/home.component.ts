@@ -4,10 +4,11 @@ import { BtnPrimaryComponent } from '../btn-primary/btn-primary.component';
 import { NewsletterFormComponent } from '../newsletter-form/newsletter-form.component';
 import { GroupPhotoComponent } from "../group-photo/group-photo.component";
 import { InfoComponent } from "../info/info.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent, BtnPrimaryComponent, NewsletterFormComponent, GroupPhotoComponent, InfoComponent],
+  imports: [HeaderComponent, BtnPrimaryComponent, NewsletterFormComponent, GroupPhotoComponent, InfoComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
