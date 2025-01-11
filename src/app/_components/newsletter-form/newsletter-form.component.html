@@ -14,6 +14,7 @@
         variant="secondary"
         (click)="submit()"
         [disabled]="!newsletterForm.valid"
+        [loading]="loading()"
       ></app-btn-primary>
     </form>
   </div>
