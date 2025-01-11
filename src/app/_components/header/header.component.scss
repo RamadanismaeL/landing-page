@@ -3,3 +3,25 @@
   justify-content: center;
   align-items: center;
 }
+
+img {
+  position: absolute;
+  top: 1%;
+  border-radius: 45px;
+  animation: flow 500ms ease-in-out alternate infinite;
+}
+
+.space {
+  margin: 210px;
+}
+
+@keyframes flow {
+  from {
+    width: 250px;
+    height: 180px;
+  }
+  to {
+    width: 270px;
+    height: 200px;
+  }
+}
