@@ -11,6 +11,8 @@ import { NewsletterService } from '../../_services/newsletter.service';
   providers: [ NewsletterService ]
 })
 export class NewsletterFormComponent {
+  name = '';
+  email = '';
   newsletterForm!: FormGroup;
   loading = signal(false);
 
@@ -29,10 +31,14 @@ export class NewsletterFormComponent {
     if(this.newsletterForm.valid)
     {
       this.service.sendData(this.newsletterForm.value.name, this.newsletterForm.value.email).subscribe({
-        next: () => {
+        next: (response) => {
+          console.log('Data successfully sent!', response);
           this.newsletterForm.reset();
           this.loading.set(false);
-        }
+        },
+        error: (error) => {
+          console.error('Error occured: ', error);
+        },
       });
     }
   }
