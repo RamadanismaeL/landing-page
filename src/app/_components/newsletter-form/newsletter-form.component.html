@@ -6,10 +6,15 @@
   <div>
     <form [formGroup]="newsletterForm">
       <label for="name">Nome</label>
-      <input type="text" name="" id="name" formControlName="name">
+      <input type="text" name="" id="name" placeholder="Enter your name" formControlName="name">
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" formControlName="email">
-      <app-btn-primary btn-text="se inscreva" variant="secondary"></app-btn-primary>
+      <input type="email" name="email" id="email" placeholder="Enter your email" formControlName="email">
+      <app-btn-primary
+        btn-text="se inscreva"
+        variant="secondary"
+        (click)="submit()"
+        [disabled]="!newsletterForm.valid"
+      ></app-btn-primary>
     </form>
   </div>
 </section>

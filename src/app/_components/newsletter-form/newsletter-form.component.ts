@@ -18,4 +18,9 @@ export class NewsletterFormComponent {
       email: new FormControl('', [Validators.required, Validators.email])
     });
   }
+
+  submit() {
+    console.log(this.newsletterForm.value);
+    this.newsletterForm.reset();
+  }
 }
